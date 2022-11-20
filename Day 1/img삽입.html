@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 절대경로와 상대경로 
+    절대경로 : 이미지 위치값을 그대로 가져옴
+    상대경로 : -->
+    <!--  상대경로 사용함  -->
+    <img src="../img/img01.jpg" alt="파일 밖 사진" />
+    <img src="./img1.jpg" alt="파일 안 사진" />
+    <!--  절대경로 사용함  -->
+    <img src="img1.jpg"/>
+    <!--  절대경로 에서는 다른 파일에있는 사진을 불러올 수 없음  
+    <img src="img01.jpg"/> 출력시 에러가남
+    -->
+
+    <!-- 
+        이미지 포맷
+
+        jpg(jpeg) : 사진용파일 색상종류를 설정 할 수 없고 퀄리티 상,중,하 로 나누어짐 
+        용량이 큽니고 배경 색상이 있습니다.
+        
+        gif : 그림파일용 용량은 작습니다.(0~255)
+        배경을 투명, gif 애니메이션
+        화질이 좋지 않다
+
+        png : gif의 용량이 작은 장점과 jpg의 화질이 좋아진 장점을 합친것
+    -->
+    <img src="../img/img01.jpg" alt="대체글" />
+    <!-- <img src="../img/img01.jpg" vspace="100" hscape="100" alt="대체글" /> -->
+    <img src="../img/img01.jpg" alt="대체글" align="top" />이미지 태그
+    <img src="../img/img01.jpg" alt="대체글" />
+    <img src="../img/img01.jpg" alt="대체글" />
+    <!-- 이미지태그에서 align 속성은 가로 왼쪽과 오른쪽으로 속성값을 지정하면 이미지가 정렬되고 세로방향으로 top, middle, bottom을 하게되면 이미지옆에있는 글자가
+    이미지높이를 기준으로 위치설정-->
+
+</body>
+</html>
