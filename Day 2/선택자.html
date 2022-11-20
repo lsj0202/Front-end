@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 {속성: 속성값; 속성: 속성값;}
+        [스타일 시트의 구성요소]
+        . 선택자(Selector)
+        -HTML 문서에서 스타일을 정의할 대상을 의미한다.
+        -하나 또는 그 이상의 선택자가 지정될 수 있다.
+        -선택자의 나열은 ","로 한다.
+        -선언(Declaration)
+        -선택자에세 지정한 스타일을 의미한다.
+        -속성(Property)과 속성값(Value)로 구성된다.
+        속성과 속성값은 ":" 으로 구분해야한다.
+        선언은 반드시 ";" 로 끝나야한다. */
+
+        /*전체 선택자: 모든요소를 선택하는 방법*/
+        *{
+            color:pink;
+        }
+        /*태그 선택자 */
+        h1{
+            color:tomato;
+        }
+        p{
+            color:blueviolet;
+        }
+        span{
+            color:red;
+        }
+        /*클래스 선택자*/
+        .txt01{
+            background-color: yellow;
+        }
+        /*아이디 선택자 */
+        #ttl{
+            color:slategrey;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="txt01">프론트앤드</h1>
+    <h1>백엔드</h1>
+    <p id="ttl">웹디자인</p>
+    <p>웹프로그램</p>
+    <span class="txt01">HTML</span>
+    <span>스타일시트</span>
+    <span>제이쿼리</span>
+    <span>리액트</span>
+    <p class="txt01">부산 광역시 부산진구 서면</p>
+</body>
+</html>
