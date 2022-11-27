@@ -1,0 +1,122 @@
+#wrap{
+    width:100%;
+}
+
+/* 상단영역 */ 
+#header{
+    width:100%;
+    height:100px;
+    background-color: yellowgreen;
+}
+
+#header_in{
+    width:1180px;
+    height:100px;
+    background-color: rgb(255, 251, 0);
+    margin: 0 auto; /* 헤더 중앙정렬 코드 */ 
+}
+
+/* 법률상담 */
+#advice{
+    width:100%;
+    height:800px;
+    background-color: brown;
+}
+#advice_in{
+    margin: 0 auto;  /*advice 중앙정렬 코드*/
+    width:1180px;
+    height:100%;
+    background-color: rgb(237, 128, 74);
+}
+#advice_h{
+    width:100%; /*width: 1180px*/
+    height:260px;
+    background-color: blueviolet;
+}
+#advice_b{
+    width:100%; /*width: 1180px*/
+    height:540px;
+    background-color: rgb(113, 62, 160);
+}
+
+/* 변호사검색 */
+#search{
+    width:100%;
+    height:800px;
+    background-color: rgb(222, 86, 86);
+}
+#search_in{
+    margin: 0 auto;
+    width:1180px;
+    height:800px;
+    background-color: rgb(116, 89, 89);
+}
+#search_h{
+    width:100%; /*width: 1180px*/
+    height:260px;
+    background-color: rgb(182, 155, 207);
+}
+#search_b{
+    width:100%;
+    height:540px;
+    background-color: rgb(159, 104, 104);
+}
+
+/* 뉴스/지식 */
+#news{
+    width:100%;
+    height:800px;
+    background-color: rgb(109, 225, 225);
+}
+#news_in{
+    margin: 0 auto;
+    width:1180px;
+    height:800px;
+    background-color: rgb(196, 102, 102);
+}
+#news_h{
+    width:100%; /*width: 1180px*/
+    height:260px;
+    background-color: rgb(135, 8, 254);
+}
+#news_b{
+    width:100%;
+    height:540px;
+    background-color: rgb(255, 50, 50);
+}
+
+/* 커뮤니티 */
+#board{
+    width:100%;
+    height:800px;
+    background-color: rgb(221, 158, 82);
+}
+#board_in{
+    margin:0 auto;
+    width:1180px;
+    height:800px;
+    background-color: rgb(228, 131, 13);
+}
+#board_h{
+    width:100%;
+    height:260px;
+    background-color: rgb(255, 140, 0);
+}
+#board_b{
+    width:1180px;
+    height:540px;
+    background-color: rgb(171, 137, 95);
+}
+
+/* 하단영역 */
+#footer{
+    width:100%;
+    height:100px;
+    background-color: yellowgreen;
+}
+#footer_in{
+    margin:0 auto;
+    width:1180px;
+    height:100px;
+    background-color: rgb(100, 100, 94);
+}

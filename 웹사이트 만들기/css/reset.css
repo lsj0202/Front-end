@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+}
+ul,li{
+    list-style:none;
+}
+img{
+    border:0;
+}
+/* a 태그의 4가지 속성들 */
+
+/* a:link{}
+a:hover{}
+a:active{}
+a:visited{} */
+
+a{
+    text-decoration: none; /*링크의 밑줄을 제거하는 효과를 준다.*/
+}
