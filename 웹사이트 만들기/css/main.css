@@ -6,37 +6,122 @@
 #header{
     width:100%;
     height:100px;
-    background-color: yellowgreen;
 }
 
 #header_in{
     width:1180px;
     height:100px;
-    background-color: rgb(255, 251, 0);
     margin: 0 auto; /* 헤더 중앙정렬 코드 */ 
+}
+#header .logo{
+    float:left;
+    width:270px;
+    height:100px;
+    padding: 33px 10px;
+    box-sizing: border-box; /* 박스의 삐져나옴을 방지함 */
+}
+#header .gnb{
+   float: left;
+   /* 마진을 사용하기 위해 부모와 자식 모두에게 float: left를 줌 */
+   margin: 40px 0 0 20px;
+}
+#header .gnb li{
+    float: left;
+    margin-right: 45px;
+}
+#header .gnb li.last{
+    margin-right: 0px;
+}
+#header .gnb li a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+#header .group{
+    float: right;
+    width:340px;
+    height:100px;
+}
+
+#header .inform{
+    float: left;
+    /* margin-top: 10px; */
+    margin: 10px 0 0 0;
+}
+#header .inform li{
+    float: left;
+    margin-right: 10px;
+    padding-right:10px;
+    border-right: 1px solid #555;
+    line-height: 12px;
+}
+/* 같은 형제 태그 중에서 첫번째와 마지막번째 */
+#header .inform li:first-child{
+    /* 형제 요소중 가상 지정 방식 */
+    
+}
+#header .inform li:last-child{
+    /* 형제 요소중 가상 지정 방식 */
+    margin-right: 0px;
+    padding-right:0px;
+    border-right: 0px;
+}
+/* 같은형제 태그중에 1번,2번,3번,4번 */
+#header .inform li:nth-child(1){
+    /* 형제 요소중 가상 지정 방식 */
+
+}
+#header .inform li:nth-child(2){
+    /* 형제 요소중 가상 지정 방식 */
+
+}
+#header .inform li:nth-child(3){
+    /* 형제 요소중 가상 지정 방식 */
+
+}
+#header .inform li:nth-child(4){
+    /* 형제 요소중 가상 지정 방식 */
+
+}
+#header .inform a{
+    font-size: 12px;
+    font-weight: 400;
+    color:#000;
+}
+
+#header .input{
+    float:left;
+    margin-top:10px;
+    margin-left: 73px;
+    width: 230px;
+    height: 30px;
+    border: 1px solid #000;
+    margin-top:10px;
+    text-align: right;/*이미지를 오른쪽으로 정렬한거임*/
 }
 
 /* 법률상담 */
 #advice{
     width:100%;
     height:800px;
-    background-color: brown;
+    background-image: url(../images/bg_main_sect1.jpg);
+    background-repeat: no-repeat;
 }
 #advice_in{
     margin: 0 auto;  /*advice 중앙정렬 코드*/
     width:1180px;
     height:100%;
-    background-color: rgb(237, 128, 74);
 }
 #advice_h{
     width:100%; /*width: 1180px*/
     height:260px;
-    background-color: blueviolet;
+    background-color: transparent;
 }
 #advice_b{
     width:100%; /*width: 1180px*/
     height:540px;
-    background-color: rgb(113, 62, 160);
+    background-color: transparent;
 }
 
 /* 변호사검색 */
