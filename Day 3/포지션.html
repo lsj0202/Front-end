@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: burlywood;
+            height:2000px;
+        }
+
+        .box0{
+            width:150px;
+            height:150px;
+            background-color: red;
+        }
+        .box1{
+            float:left;
+            position : absolute;
+            top:200px;
+            left:200px;
+            /* 포지션은 top과 left가 우선 순위이다. */
+            width:150px;
+            height:150px;
+            background-color: rgb(218, 103, 49);
+        }
+
+        .box2{
+            position : relative;
+            top:200px;
+            left:200px;
+            z-index: 100;
+            float:left;
+            width:150px;
+            height:150px;
+            background-color: rgb(184, 104, 67)
+        }
+        .box2-1{
+            position : relative;
+            top:170px;
+            left:170px;
+            float:left;
+            width:150px;
+            height:150px;
+            background-color: rgb(155, 137, 129)
+        }
+        .box3{
+            position : fixed;
+            top:200px;
+            right:200px;
+            width:60px;
+            height:250px;
+            background-color: rgb(90, 78, 72)
+        }
+        /*
+        position: 요소 (태그)를 내가 원하는 위치에 배치\
+        top,right,bottom, left(기본으로 top,left를 사용)
+        ******position들을 특정한 영역을 기준으로할때는 
+        특정 영역의 선택자에세 position: relative; 함
+        
+        position: absolute; 절대값으로 원하는 위치에 배치
+        position: relative; 상대적(다른 요소에 영향을 받음)으로 원하는 위치에 배치
+        
+        position: fixed; 원하는 위치에 고정하여 배치
+        position: static; 문서의 흐름에 맞춰서 배치 
+        */
+        
+    </style>
+</head>
+<body>
+    <div class="box0">box0</div>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box2-1">box2-1</div>
+    <div class="box3">box3</div>
+
+</body>
+</html>
