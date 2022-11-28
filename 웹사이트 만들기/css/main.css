@@ -146,6 +146,10 @@
     height:500px;
     float:left;
 }
+#advice_b .imgbox .m_banner3{
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(127, 127, 127);
+}
 #advice_b .group{
     float:right;
     width:700px;
