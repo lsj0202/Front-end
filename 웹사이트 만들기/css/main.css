@@ -371,6 +371,7 @@
 #search_h{
     width:100%; /*width: 1180px*/
     height:260px;
+    text-align: center;
 }
 #search_h h3{
     text-align: center;
@@ -508,6 +509,23 @@
 #news_h{
     width:100%; /*width: 1180px*/
     height:260px;
+    text-align: center;
+}
+#news_h h3{
+    text-align: center;
+    padding:60px 0px 20px;
+}
+#news_h p{
+    text-align: center;
+    padding:30px;
+    font-size: 22px;
+    color:#000000;
+}
+#news_h .line{
+    margin: 0 auto;
+    width:50px;
+    height:5px;
+    background-color: rgb(92, 92, 92);
 }
 #news_b{
     width:100%;
