@@ -55,12 +55,36 @@
                         <div class="banner1"><h1 class="font1">이혼, 가정</h1><img src="./images/ico_consult1.png"><p class="center1">교통사고의 불안, 의문은 <br>어떤 일이든 상담해주세요.</p></div>
                         <div class="banner2"><h1 class="font1">교통사고</h1><img src="./images/ico_consult2.png"><p class="center1">형사, 범죄의 불안,의문은 <br>어떤 일이든 상담해주세요.</p></div>
                         <div class="banner3"><h1 class="font1">형사, 범죄</h1><img src="./images/ico_consult3.png"><p class="center1">이혼,가정의 불안, 의문은<br>어떤일이든 상담해주세요.</p></div>
+                        <!-- 나는 하나하나씩 사용했는데 ul li를 사용하면 훨씬 빠름 -->
+                        <!-- <ul>
+                            <li>
+                                <h4>이혼, 가정</h4>
+                                <img src ="images/ico_consult1.png" alt="">
+                                <p>교통사고의 불안, 의문은 <br>
+                                    어떤 일이든 상담해주세요.</p>
+                            </li>
+                            <li>
+                                <h4>교통사고</h4>
+                                <img src ="images/ico_consult2.png" alt="">
+                                <p>형사, 범죄의 불안,의문은 <br>
+                                    어떤 일이든 상담해주세요.</p>
+                            </li>
+                            <li>
+                                <h4>형사, 범죄</h4>
+                                <img src ="images/ico_consult3.png" alt="">
+                                <p>이혼,가정의 불안, 의문은<br>
+                                    어떤일이든 상담해주세요.</p>
+                            </li>
+                        </ul> -->
+                    
                         <div class="back">
                             <div class="height">
-                                <p class="num">더 많은 분야가 궁금하세요?</p>
+                                <h4 class="num">더 많은 분야가 궁금하세요?</h4>
+
                                 <img class="arrow-r" src="./images/arr_next_type1.gif" alt="right-row">
                                 <img class="arrow-l" src="./images/arr_prev_type1.gif" alt="right-row">
                                 <p class="numb">1/3</p>
+                                <!--<div>1/3 <a href>&#60;</a> <a href>&#62;</a></div>-->
                             </div>
                             <div class="top">
                                 <div class="img1">
@@ -83,6 +107,32 @@
                                     <img src="./images/ico_consult_part5_off.png">
                                     <p class="font">지적재산권</p>
                                 </div>
+                                <!-- 이 부분도 ul li를 써서 코드를 짰다면 훨씬 가독성이 좋은 코드일 것이다. -->
+                                <!-- 
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <img src="./images/ico_consult_part1_off.png">
+                                            <p class="font">상속</p>
+                                        </li>
+                                        <li>
+                                            <img src="./images/ico_consult_part2_off.png">
+                                            <p class="font">금전</p>
+                                        </li>
+                                        <li>
+                                            <img src="./images/ico_consult_part3_off.png">
+                                            <p class="font">노무</p>
+                                        </li>
+                                        <li>
+                                            <img src="./images/ico_consult_part4_off.png">
+                                            <p class="font">부동산</p>
+                                        </li>
+                                        <li>
+                                            <img src="./images/ico_consult_part5_off.png">
+                                            <p class="font">지적재산권</p>
+                                        </li>
+                                    </ul> 
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -93,14 +143,121 @@
         <!-- 변호사 검색 -->
         <div id="search">
             <div id="search_in">
-                <div id="search_h">search_h</div>
-                <div id="search_b"></div>
+                <div id="search_h">
+                    <h3><img src="./images/tit_sect2.png" alt=""></h3>
+                    <div class="line"></div>
+                    <p>내가 찾는 변호사를 손쉽게 찾아보세요</p>
+                </div>
+                <div id="search_b">
+                    <div class="group">
+                        <div class="search_input">
+                            <div class="search_input_h">
+                                <h4>변호사 찾기</h4>
+                            </div>
+                            <div class="search_input_b">
+                                <p>카테고리별, 지역 별로 내가 찾은 번호사를 손쉽게 찾을 수 있습니다.</p>
+                                <input type="text" placeholder="전문분야" class="input1">
+                                <input type="text" placeholder="활동지역" class="input2">
+                                <input type="button" value="검색하기" class="input3">
+                            </div>
+                        </div>
+
+                        <div class="banner">
+                            <ul>
+                                <li>
+                                    <h4>칼럼</h4>
+                                    <img src="./images/ico_search1.png" alt="">
+                                </li>
+                                <li>
+                                    <h4>성공 사례</h4>
+                                    <img src="./images/ico_search2.png" alt="">
+                                </li>
+                                <li>
+                                    <h4>스토리</h4>
+                                    <img src="./images/ico_search3.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="imgbox"><img src="./images/main_banner1.jpg"></div>
+                </div>
+            </div>
         </div>
         <!-- 뉴스/지식 -->
         <div id="news">
             <div id="news_in">
                 <div id="news_h">news_h</div>
-                <div id="news_b"></div>
+                <div id="news_b">
+                    <div class="imgbox"><img src="./images/bg_banner_sect3.jpg" alt=""></div>
+                    <ul class="newslist">
+                        <li>
+                            <div class="imgarea"><img src="./images/news01.jpg" alt=""></div>
+                            <h4 class="title">
+                                테러 불안감으로 여행취소...수<br>
+                                수료 제대로 돌려받으려면...
+                            </h4>
+                            <p class="txt">
+                                지난 6월 28일 터미 이스탄불의 아타튀<br>
+                                르크 국제공항에서 테러가 발생해 41명<br>
+                                이 숨지고 239명이 다쳤다. 올해...
+                            </p>
+                            <p class="date">
+                                <span style="color:blue">[인사,기타]</span> 2016-07-06
+                            </p>
+                        </li>
+                        <li>
+                            <div class="imgarea"><img src="./images/news02.jpg" alt=""></div>
+                            <h4 class="title">
+                                테러 불안감으로 여행취소...수<br>
+                                수료 제대로 돌려받으려면...
+                            </h4>
+                            <p class="txt">
+                                지난 6월 28일 터미 이스탄불의 아타튀<br>
+                                르크 국제공항에서 테러가 발생해 41명<br>
+                                이 숨지고 239명이 다쳤다. 올해...
+                            </p>
+                            <p class="date">
+                                <span style="color:blue">[인사,기타]</span> 2016-07-06
+                            </p>
+                        </li>
+                        <li>
+                            <div class="imgarea"><img src="./images/news03.jpg" alt=""></div>
+                            <h4 class="title">
+                                테러 불안감으로 여행취소...수<br>
+                                수료 제대로 돌려받으려면...
+                            </h4>
+                            <p class="txt">
+                                지난 6월 28일 터미 이스탄불의 아타튀<br>
+                                르크 국제공항에서 테러가 발생해 41명<br>
+                                이 숨지고 239명이 다쳤다. 올해...
+                            </p>
+                            <p class="date">
+                                <span style="color:blue">[인사,기타]</span> 2016-07-06
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="banner2">
+                        <h4>법률지식</h4>
+                        <p>
+                            법률과 관련된 모든것을 검색해 보세요<br>
+                            변호사닷컴에서 알려드립니다
+                        </p>
+                    </div>
+
+                    <div class="banner3">
+                        <h4>용어사전</h4>
+                        <p>
+                            법률과 관련된 모든것을 검색해 보세요<br>
+                            변호사닷컴에서 알려드립니다
+                        </p>
+                    </div>
+
+                    <div class="banner4">
+                        <h4>뉴스레터 구독신청하기</h4>
+                        <br>
+                        <input size="10"> @ <input size="10"> <input placeholder="직접입력" size="10">
+                    </div>
+                </div>
             </div>
         </div>
 
