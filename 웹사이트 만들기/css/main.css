@@ -401,6 +401,7 @@
 #search_b .group .search_input{
     width:100%;
     height:230px;
+    box-shadow:2px 3px 5px 0px;
 }
 #search_b .group .search_input_h{
     width:100%;
@@ -535,6 +536,8 @@
     float:left;
     width:380px;
     height:360px;
+    box-shadow:2px 3px 5px 0px;
+    border-radius: 10px;
 }
 #news_b .imgbox img{
     border-radius:10px;
@@ -550,15 +553,16 @@
     background-color: white;
     box-sizing: border-box;
     border-radius: 10px 10px 0 0;
+    box-shadow:2px 3px 5px 0px;
 }
 #news_b .newslist li img{
     width:100%;
-    border-radius: 10px 10px 0 0;  
+    border-radius: 10px 10px 0 0; 
 }
 #news_b .newslist li .imgarea{
     width:100%;
     height:170px;
-    overflow:hidden;  
+    overflow:hidden;
 }
 #news_b .newslist li:last-child{
     margin-right: 0; /*마지막까지 꽉 채운다는 느낌이라고 한다.*/
@@ -587,6 +591,7 @@
     padding: 20px 0 0 20px;
     background: url(../images/ico_kin.png) no-repeat 90% 50%; /*90%는 세로를 50%는 가로를 나타낸다.*/
     background-color: white;/* 배경이미지를 가장 늦게 넣어줌 */
+    box-shadow:2px 3px 5px 0px;
 }
 #news_b .banner2 h4{
     font-size:24px;
@@ -605,6 +610,7 @@
     padding: 20px 0 0 20px;
     background: url(../images/ico_dictionary.png) no-repeat 90% 50%; /*90%는 세로를 50%는 가로를 나타낸다.*/
     background-color: white;/* 배경이미지를 가장 늦게 넣어줌 */
+    box-shadow:2px 3px 5px 0px;
 }
 #news_b .banner3 h4{
     font-size:24px;
@@ -621,6 +627,7 @@
     border-radius: 7px;
     padding: 20px 0 0 20px;
     background-color: white;/* 배경이미지를 가장 늦게 넣어줌 */
+    box-shadow:2px 3px 5px 0px;
 
 }
 #news_b .banner4 h4{
