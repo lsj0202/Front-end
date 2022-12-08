@@ -628,7 +628,6 @@
     padding: 20px 0 0 20px;
     background-color: white;/* 배경이미지를 가장 늦게 넣어줌 */
     box-shadow:2px 3px 5px 0px;
-
 }
 #news_b .banner4 h4{
     font-size:24px;
@@ -640,23 +639,156 @@
 #board{
     width:100%;
     height:800px;
-    background-color: rgb(221, 158, 82);
+    background: url(../images/bg_main_sect4.jpg) no-repeat 90% 50%;
 }
 #board_in{
     margin:0 auto;
     width:1180px;
     height:800px;
-    background-color: rgb(228, 131, 13);
 }
 #board_h{
     width:100%;
     height:260px;
-    background-color: rgb(255, 140, 0);
+    text-align: center;
 }
+#board_h h3{
+    text-align: center;
+    padding:60px 0px 20px;
+}
+#board_h p{
+    text-align: center;
+    padding:30px;
+    font-size: 22px;
+    color:white;
+}
+#board_h .line{
+    margin: 0 auto;
+    width:50px;
+    height:5px;
+    background-color: rgb(92, 92, 92);
+}
+
 #board_b{
     width:1180px;
     height:540px;
-    background-color: rgb(171, 137, 95);
+}
+#board_b .left{
+    float:left;
+    width:750px;
+    height:540px;
+}
+#board_b .left .box{
+    border-radius: 10px;
+    box-shadow:2px 3px 5px 0px;
+    float:left;
+    width:360px;
+    height:250px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: white;
+    overflow:hidden;
+}
+#board_b .left .box .box_head{
+    background-color: rgb(50, 50, 203);
+    width:100%;
+    height:50px;
+}
+#board_b .left .box .box_head1{
+    background-color: rgb(91, 91, 213);
+    width:100%;
+    height:50px;
+}
+#board_b .left .box .box_head2{
+    background-color: rgb(26, 26, 247);
+    width:100%;
+    height:50px;
+}
+#board_b .left .box .box_head3{
+    background-color: rgb(146, 146, 230);
+    width:100%;
+    height:50px;
+}
+#board_b .left .box .box_head .pp{
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    color:white;
+    font-weight: border;
+}
+#board_b .left .box .box_head1 .pp{
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    color:white;
+    font-weight: border;
+}
+#board_b .left .box .box_head2 .pp{
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    color:white;
+    font-weight: border;
+}
+#board_b .left .box .box_head3 .pp{
+    padding-top: 15px;
+    padding-left: 20px;
+    font-size: 15px;
+    color:white;
+    font-weight: border;
+}
+#board_b .left .box .box_body .ppp{
+    padding-top: 13px;
+    padding-left: 17px;
+    font-size: 17px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:black;
+    font-weight: border;
+}
+#board_b .left .box .box_body p{
+    padding-top: 13px;
+    padding-left: 17px;
+    color:black;
+}
+#board_b .right{
+    float:right;
+    width:430px;
+    height:540px;
+}
+#board_b .right .img{
+    margin-top: 10px;
+    float:left;
+    width:400px;
+    height:340px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background: url(../images/bg_banner_sect4.jpg) no-repeat; /*90% 50%*/
+    box-shadow:2px 3px 5px 0px;
+}
+#board_b .right .bbb{
+    width:400px;
+    margin-top: 10px;
+    height:160px;
+    background-color: rgb(255, 255, 255);
+    float:left;
+    margin-left: 10px;
+    box-shadow:2px 3px 5px 0px;
+    border-radius: 10px;
+}
+#board_b .right .bbb p{
+    padding: 20px 0 20px 20px;
+    font-weight: border;
+    font-size: 23px;
+    color:#000;
+    margin-right: 0px;
+}
+#board_b .right .bbb .btn{
+    color:white;
+    border: 1px solid rgb(77, 77, 77);
+    background-color: rgb(10, 145, 213);
+    width:135px;
+    height:40px;
+    margin:0 0 0 20px;
+    margin-right:0px;
 }
 
 /* 하단영역 */
