@@ -469,7 +469,7 @@
     width:230px;
     height: 260px;
     background-color: rgb(48, 35, 35);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 #search_b .group .banner li:last-child{
     margin-right:0px;
@@ -477,14 +477,17 @@
 #search_b .group .banner li:nth-child(1){
     background-color: rgb(6, 137, 237);
     box-shadow:2px 3px 5px 0px;
+    border-radius: 10px;
 }
 #search_b .group .banner li:nth-child(2){
     background-color: rgb(28, 116, 183);
     box-shadow:2px 3px 5px 0px;
+    border-radius: 10px;
 }
 #search_b .group .banner li:nth-child(3){
     background-color: rgb(45, 105, 150);
     box-shadow:2px 3px 5px 0px;
+    border-radius: 10px;
 }
 
 #search_b .imgbox{
