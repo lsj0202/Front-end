@@ -793,9 +793,10 @@
 
 /* 하단영역 */
 #footer{
-    width:100%;
+    width:1895px;
     height:260px;
-    background-color: yellowgreen;
+    background-color: rgb(210, 210, 210);
+    border:2px solid rgb(224, 224, 224);
 }
 #footer_in{
     margin:0 auto;
@@ -806,13 +807,31 @@
 #footer_top{ 
     width:100%;
     height:50px;
-    background-color: rgb(86, 86, 86);
 }
 #footer_top_in{
     width:1180px;
     height: 50px;
     margin: 0 auto;
-    background-color: blue;
+}
+#footer_top_in .foot{
+    width:300px;
+    height: 50px;
+    float:left;
+    background-color: rgb(115, 115, 115);
+}
+#footer_top_in .foot h3{
+    margin-top: 15px;
+    margin-right:50px;
+    color:white;
+    font-size: 13px;
+    font-weight: border;
+    text-align: center;
+}
+#footer_top_in .foot .igs{
+    float:left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 0px;
 }
 #footer_bottom{
     width:100%;
@@ -822,6 +841,28 @@
 #footer_bottom_in{
     width:1180px;
     height:210px;
-    background-color: rgb(148, 89, 89);
     margin:0 auto;
+}
+#footer_bottom_in .lli{
+    margin-top:20px;
+    margin-bottom: 10px;
+    float:left;
+    font-size:15px;
+    margin-right: 10px;
+    padding-right:10px;
+    border-right: 1px solid #555;
+    line-height: 12px;
+}
+
+#footer_bottom_in .lli:last-child{
+    /* 형제 요소중 가상 지정 방식 */
+    margin-right: 0px;
+    padding-right:0px;
+    border-right: 0px;
+}
+#footer_bottom_in p{
+    margin-top: 27px;
+    color:rgb(63, 63, 63);
+    float:left;
+    font-size: 13px;
 }
