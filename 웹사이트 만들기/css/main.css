@@ -843,7 +843,15 @@
     height:210px;
     margin:0 auto;
 }
-#footer_bottom_in .lli{
+#footer_bottom_in .right{
+    float:left;
+    width:800px;
+    height:210px;
+    margin-right: 0px;
+    padding-right:0px;
+    border-right: 0px;
+}
+#footer_bottom_in .right .lli{
     margin-top:20px;
     margin-bottom: 10px;
     float:left;
@@ -854,15 +862,53 @@
     line-height: 12px;
 }
 
-#footer_bottom_in .lli:last-child{
+#footer_bottom_in .right .lli:last-child{
     /* 형제 요소중 가상 지정 방식 */
     margin-right: 0px;
     padding-right:0px;
     border-right: 0px;
 }
-#footer_bottom_in p{
+#footer_bottom_in .right p{
     margin-top: 27px;
     color:rgb(63, 63, 63);
     float:left;
     font-size: 13px;
+}
+#footer_bottom_in .left{
+    float:right;
+    width:380px;
+    height:210px;
+}
+#footer_bottom_in .left .toptop{
+    float:left;
+    margin-top: 53px;
+    margin-left:150px;
+    position: absolute;
+}
+#footer_bottom_in .left b{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border-width: large;
+    float:left;
+    margin-right: 70px;
+}
+#footer_bottom_in .left .ni{
+    width:300px;
+    height:100px;
+    float:left;
+    margin-right: 50px;
+    margin-right: 0px;
+}
+#footer_bottom_in .left .sub{
+    width:80px;
+    height:30px;
+    float:right;
+    margin-right: 95px;
+    margin-top:11px;
+    position:fixed;
+}
+#footer_bottom_in .left p{
+    margin-top: 10px;
+    float:left;
 }
