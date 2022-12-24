@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{ margin: 0; padding: 0;}
+    ul,li{list-style: none;}
+    body{
+        padding:6px;
+        font-size:12px;
+    }
+    div{
+        font-size: 1.2rem; 
+        /*1em은 100%라는 의미로 12px을 의미한다.*/
+        /*1 rem은 최상위 글자크기를 기준으로 크기를 설정한다.*/
+        /* html에 글자 크기가 30px이므로 1.2rem라고 설정하면 글자 크기는 36px로 된다.*/
+        /*VW, VH 화면 즉 웹브라우저 크기에 100vw이면 화면크기 100%라고 설정한다.*/
+    }
+</style>
+<body>
+    <div>
+        test  <!-- 100px * 1.2 = 120px -->
+        <div>
+            test <!-- 120px * 1.2 = 144px-->
+            <div>test</div> <!-- 140px * 120 = 172.8px -->
+        </div>
+    </div>
+
+    <div style="width: 5em; height: 3em; border:1px solid #ccc;"></div>
+<br><br><br>
+    <div style="width: 50vw; height: 50vh; border:1px solid #ccc;">
+        <h3 style="font-size: 10vw;">vw/vh</h3>
+    </div>
+</body>
+</html>
