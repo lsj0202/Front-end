@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /*
+        float 와 flex는 매우 다르다.
+    */
+    .wrapper {
+        width:500px;
+        height:50px;
+        border:3px solid red;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .wrapper div{
+        width:100px;
+        border: 1px solid black;
+        background-color:yellow;
+    }
+    h2{
+        font-size:20px;
+        font-weight:bold;
+        padding:20px;
+    }
+    #container1{
+        justify-content: flex-start;
+    }
+    #container2{
+        justify-content: flex-end;
+    }
+    #container3{
+        justify-content: center;
+    }
+    #container4{
+        justify-content: space-between;
+    }
+    #container5{
+        justify-content: space-around;
+    }
+    #container6{
+        justify-content: space-evenly;
+    }
+</style>
+<body>
+    <h1>flex-justify-content:flex-start</h1>
+    <div id="container1" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+
+    <h1>flex-justify:flex-end</h1>
+    <div id="container2" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+
+    <h1>flex-justify:flex-center</h1>
+    <div id="container3" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+
+    <h1>flex-justify: space between</h1>
+    <div id="container4" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+
+    <h1>flex-justify:flex-around</h1>
+    <div id="container5" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+
+    <h1>flex-justify:flex-evenly</h1>
+    <div id="container5" class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+    </div>
+
+</body>
+</html>
