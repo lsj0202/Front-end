@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{padding-bottom: 300px;}
+       .list{
+            width: 600px;
+            height: 300px;
+            border: 5px double #ccc;
+        }
+        .list >li{float: left;
+                  list-style: none;
+                  margin:5px 5px;
+                  width: 140px;
+                  height: 250px;
+                  border: 1px solid #ccc;
+                  box-sizing: border-box; 
+                }
+        .list >li .in_box{  
+                  width: 140px;
+                  height: 250px;
+                  background-color:#f1f1f1;
+                  opacity: 0;
+                  cursor: pointer;
+                  text-align: center;
+                  line-height: 250px;
+                  transition: all 0.7s;} 
+        .list >li:hover .in_box{
+                  opacity: 1;
+        }       
+    </style>
+</head>
+<body>
+       
+    <ul class="list">
+        <li><div class="in_box"><h2>in_box</h2></div></li>
+        <li><div class="in_box"><h2>in_box</h2></div></li>
+        <li><div class="in_box"><h2>in_box</h2></div></li>
+        <li><div class="in_box"><h2>in_box</h2></div></li>
+    </ul>
+</body>
+</html>

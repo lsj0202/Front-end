@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    ul,li{
+        list-style:none;
+    }
+    a{
+        text-decoration: none;
+    }
+    img{
+        border:0;
+    }
+    #wrap{
+        width:100%;
+    }
+    #header{
+        width:100%; height:130px;
+        background-color:blue;
+    }
+    #header_in{
+        margin:0 auto;
+        width:1300px; height:130px;
+        background-color: blueviolet;
+        padding-top:50px;
+        box-sizing: border-box;
+        position:relative;
+    }
+    #header_in .nav{
+        margin:0 auto;
+        width:800px;
+        height:30px;
+        margin:0 auto;
+        border:1px solid #555;
+    }
+    #header_in .nav li{
+        width:20%;
+        float:left;
+        height:30px;
+        line-height: 30px;
+        text-align:center;
+    }
+    #header_in .nav li a{
+        width:100%;
+        height:30px;
+        display:block;
+        line-height: 30px;
+        transition: all 0.7s;
+    }
+    #header_in .nav li a:hover{
+        background-color: tomato;
+        color:#fff;
+    }
+    #header_in .submn_area{
+        position:absolute;
+        top:79px; left:0;
+        width:100%;
+        height:0px;
+        background-color: rgb(43, 148, 37);
+    }
+
+    #header_in .nav:hover + .submn_area, .submn_area:hover {
+        height:400px;
+    }
+    
+    #main_img{
+        width:100%;
+        height:400px;
+        background-color: yellowgreen;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="header_in">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="">menu</a></li>
+                        <li><a href="">menu</a></li>
+                        <li><a href="">menu</a></li>
+                        <li><a href="">menu</a></li>
+                        <li><a href="">menu</a></li>
+                    </ul>
+                    <div class="submn_area">submn_area</div>
+                </nav>
+            </div>
+        </header>
+        <section id="main_img"></section>
+    </div>
+</body>
+</html>

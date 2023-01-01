@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{padding-bottom: 300px;}
+
+        .box01{width: 200px; height: 200px;
+               border:5px solid #000 ;
+               /* transform: translate(100px, 300px); */
+               transition-duration: 1s;
+        }
+        .box01:hover{
+              transform: translate(100px, 100px);
+              transition-delay: 0s;
+              transition-duration: 1s;
+
+        }
+        
+        .box02{
+               margin: 50px;
+               width: 200px; height: 200px;
+               border:5px solid #000 ;
+               transform: scale(1);
+               transition: all 3s;
+        }
+        .box02:hover{
+            transform: scale(2);
+        }
+
+        .box03{
+               margin: 50px;
+               width: 200px; height: 200px;
+               border:5px solid #000 ;
+               transform: rotate(60deg);
+        }
+        .box04{
+               margin: 50px;
+               width: 200px; height: 200px;
+               border:5px solid #000 ;
+               transform: skew(-45deg, 0deg);
+        }
+        .box04-1{
+               margin: 50px;
+               width: 200px; height: 200px;
+               border:5px solid #000 ;
+               transform: skew(0deg,-45deg) ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box01"><h2>box01</h2></div>
+    <div class="box02"><h2>box02</h2></div>
+    <div class="box03"><h2>box03</h2></div>
+    <div class="box04"><h2>box04</h2></div>
+    <div class="box04-1"><h2>box04-1</h2></div>
+</body>
+</html>

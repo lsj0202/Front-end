@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{padding-bottom: 300px;}
+
+        .box01{width: 200px; height: 200px;
+               border:5px solid #000 ;
+               /* transform: translate(100px, 300px); */
+               transition-duration: 1s;
+        }
+        .box01:hover{
+              transform: translate(100px, 100px);
+              transition-delay: 0s;
+              transition-duration: 1s;
+
+        }
+
+        .box02{width: 200px; height: 200px;
+               border:5px solid #000 ;
+               cursor: pointer;
+               
+        }
+        .box02_01{width: 200px; height: 200px;
+               border:5px solid red ;
+               transform: rotate(0deg);
+               transition: all 0.7s;
+        }
+        .box02:hover .box02_01{
+               transform: rotate(360deg);
+        }
+        
+
+        .box03{width: 200px; height: 200px;
+               border:5px solid #000 ;
+               cursor: pointer;      
+        }
+        .box04{width: 200px; height: 200px;
+               border:5px solid blue ;  
+               transform: rotate(0deg) translate(0, 0);
+               transition: all 1s;    
+        }
+        .box03:hover + .box04{
+               transform: rotate(360deg) translate(500px, 0);
+        }
+
+
+        .box05{width: 200px; height: 200px;
+               border:5px solid #000 ;
+               cursor: pointer;      
+        }
+        .box06{width: 200px; height: 200px;
+               border:5px solid #000 ;
+               cursor: pointer;      
+        }
+        .box07{width: 200px; height: 200px;
+               border:5px solid red ;
+               transition: all 1.5s;
+        }
+
+        .box05:hover ~.box07{
+            width: 1000px; height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>자신에게 애니메이션 적용할때</h2>
+    <div class="box01"></div>
+
+    <br/><br/><br/><br/><br/>
+    <h2>자식요소에게 애니메이션 적용할때</h2>
+    <div class="box02">
+        <div class="box02_01">box02_01</div>
+    </div>
+    
+    <br/><br/><br/><br/><br/>
+    <h2>인접한 형제요소에게 애니메이션 적용할때</h2>
+    <div class="box03">box03</div>
+    <div class="box04">box04</div>
+
+    <br/><br/><br/><br/><br/>
+    <h2>멀리 떨어진 형제요소에게 애니메이션 적용할때</h2>
+    <div class="box05">box05</div>
+    <div class="box06">box06</div>
+    <div class="box07">box07</div>
+</body>
+</html>

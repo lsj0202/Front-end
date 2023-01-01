@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+        body{padding-bottom: 300px;}
+           
+        .nav{
+             margin: 50px;
+             width: 600px; height: 30px;
+             border: 1px solid #555;
+            }
+        .nav > li{
+            float: left; 
+            width: 150px; 
+            height: 30px;
+            border-right: 1px solid #555;
+            box-sizing: border-box;
+            position: relative;}
+        .nav > li:last-child{
+            border-right:0;
+        }  
+        .nav > li >a{
+            display: block;
+            width: 150px; 
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.7s;
+        } 
+        .nav > li >a:hover{
+            background-color: yellowgreen;
+            color: #fff;
+        } 
+        .sub {width: 100%;
+              position: absolute;
+              top:30px; left: 0px;
+              border:1px solid #ccc;
+              opacity: 0;
+              transition: all 0.7s;}
+        .sub li{ width: 100%; height: 30px;
+                 text-align: center;
+                line-height: 30px;
+                border-bottom:1px solid #ccc;} 
+        .nav > li:hover .sub{opacity: 1;}             
+    </style>
+</head>
+<body>
+       
+    <ul class="nav">
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu</a>
+            <ul class="sub">
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+                <li><a href="#">sub</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{padding-bottom: 300px;}
+        .tab_area{
+            width: 300px;
+            height: 400px;
+            border:2px solid #ccc;
+            position: relative;
+        }
+        input{display: none;}
+        label{cursor: pointer;}
+        
+        .box{
+            width: 300px;
+            height: 0px;
+            position:absolute;
+            top:30px; left: 0;
+            /* display: none; 애니메이션 적용안됨 */
+            opacity: 0;
+            transition: all 0.7s;
+        }
+        .box1{ background-color:violet ; z-index: 400;}
+        .box2{ background-color:rgb(102, 215, 32) ;  z-index: 300;}
+        .box3{ background-color:rgb(130, 146, 238) ; z-index: 200;}
+        .box4{ background-color:rgb(234, 238, 130) ; z-index: 100;}
+
+        .menu1:checked ~ .box1,
+        .menu2:checked ~ .box2,
+        .menu3:checked ~ .box3,
+         .menu4:checked ~ .box4{/*display: block;*/ opacity: 1; height: 370px;} 
+
+    </style>
+</head>
+<body>
+       <div class="tab_area">
+        <label for="m1">menu1</label> <input type="radio" id="m1" name="menu" class="menu1" checked>
+        <label for="m2">menu2</label> <input type="radio" id="m2" name="menu" class="menu2">
+        <label for="m3">menu3</label> <input type="radio" id="m3" name="menu" class="menu3">
+        <label for="m4">menu4</label> <input type="radio" id="m4" name="menu" class="menu4">
+
+        <div class="box1 box"><h2>box01</h2></div>
+        <div class="box2 box"><h2>box02</h2></div>
+        <div class="box3 box"><h2>box03</h2></div>
+        <div class="box4 box"><h2>box04</h2></div>
+       </div>
+</body>
+</html>
