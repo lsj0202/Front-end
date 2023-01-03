@@ -7,18 +7,7 @@
     <title>지구본 움직이기</title>
     <link rel="stylesheet" href="css/gigu.css"> 
     <script src="libs/jquery-3.6.3.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            //지구이미지 웹요소(노드) 찾아서 저장
-            var $gigu = $("#gigu");
-            //버튼에 이벤트를 등록.
-            $("#btnStart").click(function(){
-                $gigu.animate({
-                    left: "480px"
-                }, 1000);
-            })
-        })
-    </script>
+    <script src="js/gigu.js"></script>
 </head>
 <body>
     <div id="panel">
