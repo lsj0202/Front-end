@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <script>
+        var UserId = window.prompt("아이디를 입력해주세요.");
+        var UserPw = window.prompt("비밀번호를 입력해주세요");
+
+        if (UserId == "lsj0202" && UserPw == "lee!"){
+            alert("로그인 성공!");
+        }
+        else if(UserId == "lsj0202"){
+            alert("비밀번호를 잘못 입력하셨습니다.");
+        }
+        else {
+            alert("아이디가 잘못 입력되었습니다.")
+        }
+    </script>
+</body>
+</html>

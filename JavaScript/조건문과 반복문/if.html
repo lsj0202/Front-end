@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문-2</title>
+</head>
+<body>
+    <script>
+        //짝수 판별 프로그램
+        var value = window.prompt("숫자를 입력해주세요."); //String Type이다.
+
+        parseInt(value); //형변환 한거임 string -> number
+
+        if(value % 2 == 0 && value % 3==0){
+            alert("2와 3의 공배수 입니다.");
+        }
+        else{
+            alert("2와 3의 공배수가 아닙니다.");
+        }
+    </script>
+</body>
+</html>
