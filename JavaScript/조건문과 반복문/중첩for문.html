@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단을 외자</title>
+</head>
+<body>
+    <script>
+        var dan = prompt("단을 입력하세요","단입력");
+        var gob = prompt("곱을 입력하세요","곱입력");
+
+        dan = parseInt(dan);
+        gob = parseInt(gob);
+
+        for(var i=1; i<=dan; i++){
+            for(var j=1; j<=gob; j++){
+                document.write(i + "x" + j + "=" + i*j +"       ");
+            }
+            document.write("<br><br>");
+        }
+    </script>
+</body>
+</html>
