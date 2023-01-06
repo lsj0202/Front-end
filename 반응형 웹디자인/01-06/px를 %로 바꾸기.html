@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{width:90%; margin:0; border:2px solid;}
+        .box01{
+            width:31.25%;
+            height:300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        (가변 크기로 만들 박스의 가로 너비 % 가변 크기로 만들 박스를 감싸고 있는 박스의 가로 너비) x 100 = 가변 크기의 값
+        가변 마진 값도 위의 공식을 적용하면 된다.
+    -->
+    <div id="wrap">
+        <div class="box01"></div>
+    </div>
+</body>
+</html>
