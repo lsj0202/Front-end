@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>변수(숫자 데이터 타입)</h2>
+    <script>
+        'use strict';
+
+        const num1 = 10;
+        const num2 = 5;
+
+        const str1 = "Hello JavaScript";
+        const str2 = "Hello World";
+        const str3 = "100";
+
+        console.log(num1,num2);
+        console.log(str1,str2,str3);
+
+        console.log(num1 + num2); //15 숫자 연산
+        console.log(num1 + str1); //문자 연산 (결합)
+        console.log(num1 + ''); //문자 연산 (결합)
+        console.log(typeof(num1)); //숫자형
+        console.log(typeof(num1 + '')); //문자열형
+
+        console.log(str1 + "\n" + str2);
+        console.log(str1 + "<br>" + str2);
+
+        //변수값을 객체로 적용
+        console.log("str1이라는 변수값 : " + str1); //str1 이라는 변수의 값 : str1
+        console.log(`str1이라는 변수값 ${str1}`);
+
+        console.log(num1 + "+" + num2 + "=" + (num1+num2)); //15 num1 + num2 = 15
+        console.log(`${num1} + ${num2} = ${num1+num2}`)
+    </script>
+</body>
+</html>
