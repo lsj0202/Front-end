@@ -149,5 +149,15 @@ Object() : 모든 자료형을 객체형으로 변환
 parseInt() : 문자형을 int 형으로 변환
 parseIntFloat() : 문자형을 float형으로 변환
 
+자바스크립트의 대화상자
+alert() 또는 window.alert() : 사용자에게 메세지를 보여주고, 확인을 기다립니다. 
+confirm() 또는 window.confirm() : 사용자에게 메세지를 보여주고, 확인이나 취소를 누르면 그 결과를 불리언값으로 리턴합니다.
+    예> const result = confirm("확인또는 취소를 눌러주세요");
+
+prompt() 또는 window.prompt() : 사용자에게 메세지를 보여주고, 사용자가 입력한 문자열을 리턴합니다.
+    예> const prompt = prompt("이름을 입력하세요");
+
+
+
 
 
