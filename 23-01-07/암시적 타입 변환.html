@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>암시적 타입변환</title>
+</head>
+<body>
+    <h2>암시적 타입변환</h2>
+    <script>
+        'use strict';
+
+        const a = 10 + "문자열";
+        console.log(a);
+
+        const b = "3" * "5";
+        console.log(b);
+
+        const c = 10 - "문자열";
+        console.log(c); //Nan 계산할 수 없어요
+
+    </script>
+</body>
+</html>
