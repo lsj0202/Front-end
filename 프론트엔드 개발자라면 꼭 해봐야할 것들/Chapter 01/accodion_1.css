@@ -1,17 +1,22 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+}
 table{
     width: 80%;
     margin: 0 auto;
     border-collapse: collapse;
+    background-color: rgb(230, 230, 230);
 }
 td,th{
     border: 1px solid lightgray;
     text-align: center;
-    padding:5px;
 }
 th{
     background-color: rgb(126, 126, 126);
     color:white;
     font-weight: 500;
+    padding:1.5%;
 }
 td{
     font-weight: 200;
@@ -28,12 +33,43 @@ td{
     font-weight:400;
     margin-top:3%;
 }
-.btn{
-    margin-left:10%;
-    text-align: center;
-    margin-top: 3%;
-}
+
 tr:hover{
     background-color: rgb(182, 182, 182);
     transition: 0.5s;
 }
+.caption{
+    margin-top:1%;
+    margin-left:10%;
+    color:rgb(167, 167, 167);
+}
+.container1{
+
+}
+.title1{
+    cursor:pointer;
+    color:rgb(34, 34, 34);
+}
+.answer1{
+    /* display:none;  안보이게됨 ㄷㄷ 
+    padding:15px; */
+    height:0px;
+    overflow: hidden;
+}
+.btn{
+    margin-left:10%;
+    text-align: center;
+    margin-top: 3%;
+    padding:0.5%;
+    background-color: rgb(221, 221, 221);
+    border:1px solid rgb(221, 221, 221);
+}
+.btn:hover{
+    background-color: rgb(161, 161, 161);
+    transition: 0.3s;
+}
+
+/* .active{
+    display:block;
+    height:300px;
+} */
