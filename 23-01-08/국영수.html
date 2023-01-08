@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국영수</title>
+</head>
+<body>
+    <h2>홍길동님의 성적표</h2>
+    <script>
+        const kor = Number(prompt('국어점수 입력'));
+        const eng = Number(prompt('영어점수 입력'));
+        const math = Number(prompt('수학점수 입력'));
+
+        document.write(`${kor}<br>`);
+        document.write(`${eng}<br>`);
+        document.write(`${math}<br>`);
+
+        document.write(`국영수의 총점은 ${kor+eng+math} 입니다.<br>`);
+        document.write(`평균은 ${(kor+eng+math)/3} 입니다.<br>`);
+    </script>
+</body>
+</html>
