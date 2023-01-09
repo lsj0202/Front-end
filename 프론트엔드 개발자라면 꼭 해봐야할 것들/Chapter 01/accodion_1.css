@@ -33,7 +33,6 @@ td{
     font-weight:400;
     margin-top:3%;
 }
-
 tr:hover{
     background-color: rgb(182, 182, 182);
     transition: 0.5s;
@@ -58,16 +57,19 @@ tr:hover{
     padding:15px; */
     height:0px;
     overflow: hidden;
+    transition: 0.3s;
 }
-.btn{
+#btn{
     margin-left:10%;
     text-align: center;
     margin-top: 3%;
     padding:0.5%;
     background-color: rgb(221, 221, 221);
     border:1px solid rgb(221, 221, 221);
+
+
 }
-.btn:hover{
+#btn:hover{
     background-color: rgb(161, 161, 161);
     transition: 0.3s;
 }
@@ -76,4 +78,12 @@ tr:hover{
     display:block;
     height:300px;
     transition: 0.3s;
+}
+
+.ask{
+    text-align: left;
+    background-color: rgb(151, 151, 151);
+    color:white;
+    font-weight: 500;
+    padding:1%;
 }
