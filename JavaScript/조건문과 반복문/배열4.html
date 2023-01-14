@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array4</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        let arr1 = ['김사과',20,160.5,true];
+        console.log(arr1);
+
+        //배열 추가
+        arr1.push('여자');
+        console.log(arr1);
+
+        //첫번째 배열 요소 삭제
+        arr1.shift()
+        console.log(arr1);
+
+        //배열 합치기-> 두개의 배열을 합치기 할때는 배열로 
+        let arr2 = ['김사과', '서울','학생'];
+        let arr = arr1.concat(arr2);
+        console.log(arr);
+
+        //배열사이에 기호 추가
+        arr = arr.join(" ");
+        console.log(arr);
+
+        arr2 = arr2.join("|");
+        console.log(arr2);
+
+        let arr3 = ['c','z','d','a','b'];
+        arr3.sort();
+        console.log(arr3);  
+
+        arr3.reverse(); //정렬을 반전
+        console.log(arr3);
+    </script>
+</body>
+</html>
