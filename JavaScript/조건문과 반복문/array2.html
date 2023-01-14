@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array2</title>
+</head>
+<body>
+    <script>
+        'use strict';
+        const cnt = Number(prompt('입력받을 숫자의 개수를 입력하세요'));
+        let idx = 0;
+        let arr = [];
+
+        while(idx < cnt){//배열 요소값을 입력
+            arr[idx] = Number(prompt(`${idx + 1}번째 숫자를 입력하세요`));
+
+            idx ++;
+        }
+        for(let i = 0; i <arr.length; i++){
+            console.log(arr[i]);
+        }
+    </script>
+</body>
+</html>
