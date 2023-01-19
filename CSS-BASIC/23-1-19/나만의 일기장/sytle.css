@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.container{
+    background-color: rgb(195, 195, 195);
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.wrap{
+    width:620px;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+.wrap_head{
+    border-bottom: 1px dashed gray;
+    padding-bottom:20px;
+    margin-bottom:20px;
+}
+.wrap_head_title{
+    font-size:32px;
+    color:white;
+    background-color: orange;
+    text-align: center;
+    padding : 5px;
+    margin-bottom: 10px;
+}
+.wrap_head_sub-title{
+    font-size: 18px;
+    padding:10px 0px;
+}
+#point{
+    color:orange;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+    display:block;
+    margin-top:15px;
+}
+
+.wrap_body{
+    border:1px solid #ddd;
+    padding: 20px 30px;
+}
+.diary-title{
+    font-size: 18px;
+    font-weight:600;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+    display:block;
+}
+
+.kimchi{
+    color:red;
+    font-weight: 600;
+}
+.egg{
+    color:orange;
+    font-weight: 600;
+}
+.highlight{
+    font-size: large;
+    font-style: italic;
+    font-weight: 700;
+    color:blue;
+}
+.left{
+    color:#919191;
+    text-align: right;
+    font-size:14px;
+}
