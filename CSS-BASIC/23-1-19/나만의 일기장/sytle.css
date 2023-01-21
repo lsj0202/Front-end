@@ -3,6 +3,11 @@
     padding:0;
     text-decoration: none;
     box-sizing: border-box;
+    text-decoration: none;
+    color:black;
+}
+ul,li{
+    list-style: none;
 }
 .container{
     background-color: rgb(195, 195, 195);
@@ -75,4 +80,40 @@
     color:#919191;
     text-align: right;
     font-size:14px;
+}
+.header{
+    /*width:100%; 기본적 넓이*/
+    height:80px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+}
+.header-inner{
+    width:900px;
+    height:100%;
+    display:flex;
+    /*flex-direction: row;*/
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    width:100px;
+}
+.logo a{
+    color:orange;
+}
+.menu{
+    
+}
+.menu ul{
+    display:flex;
+    flex-direction: row;
+}
+.menu ul a{
+    padding: 10px 20px; /* 사용자의 더 나은 클릭을 유도 */
+    display:block;
+}
+.user{
+    width:100px;
 }
