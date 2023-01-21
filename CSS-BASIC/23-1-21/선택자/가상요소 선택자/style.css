@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+.container{
+    padding: 10px;
+    background: gray;
+}
+.container .box{
+    width:100px;
+    float:left;
+    background-color: blue;
+}
+
+.container .box:nth-of-type(2n){
+    background-color: red;
+}
+
+.clearfix:after{
+    content:"";
+    display:block;
+    clear:both;
+}
