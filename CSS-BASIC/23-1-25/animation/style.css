@@ -16,11 +16,12 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    animation: moveBox;
+    /* animation: moveBox;
     animation-duration:2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-direction: alternate; */
+    animation: moveBox 2s ease-in-out infinite alternate; /* 간소화 */
     position:absolute;
 }
 
