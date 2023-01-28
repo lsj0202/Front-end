@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="./js/jquery.js"></script>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        margin-top:150px; margin-left:500px;
+    }
+    #wrapper{
+        margin-top:20px;
+    }
+    #box{
+        width:300px;
+        height:300px;
+        border:3px solid #000;
+    }
+    input{
+        padding:5px 12px;
+    }
+</style>
+<script>
+    //문서를 읽어들이면 실행하라는 브라우저이벤트를 기본으로선언
+    $(document).ready(function(){
+        var control = $('#control');
+        var showBtn = control.find('input:eq(0)'); //자식요소를 찾을때 이용한다. /
+        var hideBtn = control.find('input:eq(1)'); //eq는 index 값이라고 한다.
+
+        var box = $('#wrapper #box');
+
+        //애니메이션
+        //1초 => 1000
+        box.hide();
+        
+        showBtn.click(function(){
+            box.show(700);
+        });
+        hideBtn.click(function(){
+            box.hide(500);
+        });
+    });
+</script>
+<body>
+    <div id="control">
+        <input type="button" value="show" class="show"/>
+        <input type="button" value="hide" />
+    </div>
+    <div id="wrapper">
+        <div id="box">
+
+        </div>
+    </div>
+</body>
+</html>

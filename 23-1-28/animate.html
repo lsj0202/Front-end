@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <script src="./js/jquery.js"></script>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        margin-top:150px; margin-left:500px;
+    }
+    #wrapper{
+        margin-top:20px;
+    }
+    #box{
+        width:300px;
+        height:300px;
+        border:3px solid #000;
+        background-color: tomato;
+        position:absolute;
+        left:300px;
+    }
+    input{
+        padding:5px 12px;
+    }
+</style>
+<script>
+    //문서를 읽어들이면 실행하라는 브라우저이벤트를 기본으로선언
+    $(document).ready(function(){
+        var box = $('#box');
+        var bigBtn = $('#controller > .big');
+        var smallBtn = $('#controller > .small');
+        var leftBtn = $('#controller > .left');
+        var rightBtn = $('#controller > .right');
+
+        bigBtn.click(function(){
+            box.animate({width:'500px',height:'500px', opacity:0.7});
+        });
+
+        smallBtn.click(function(){
+            box.animate({width:'150px',height:'150px', opacity:0.2});
+        });
+
+        leftBtn.click(function(){
+            box.animate({left:0});
+        });
+
+        rightBtn.click(function(){
+            box.animate({left:'100%'});
+        });
+        
+    });
+
+</script>
+<body>
+    <div id="controller">
+        <input type="button" class="big" value="크고 불투명하게 하기"/>
+        <input type="button" class="small" value="작고 투명하게 하기"/>
+        <input type="button" class="left" value="왼쪽으로 이동 하기"/>
+        <input type="button" class="right" value="오른쪽으로 이동 하기"/>
+    </div>
+    <div id="wrapper">
+        <div id="box">
+
+        </div>
+    </div>
+</body>
+</html>
