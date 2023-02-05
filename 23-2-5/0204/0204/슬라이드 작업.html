@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crc="./js/jquery.js"></script>
+</head>
+<style>
+    #con1{
+        background-color: #c60;
+        background-color: #f60;
+        background-color: #f93;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        border:2px solid #ccc;
+        opacity: 0;
+    }
+    .box1-1{
+        position:absolute; top:200px; left:500px;
+    }
+    .box1-2{
+        position:absolute; top:500px; left:100px;
+    }
+    .box1-3{
+        position:absolute; top:700px; left:1200px;
+    }
+
+    .box2-1{
+        position:absolute; top:200px; left:500px;
+    }
+    .box2-2{
+        position:absolute; top:500px; left:100px;
+    }
+
+    .box2-3{
+        position:absolute; top:700px; left:1200px;
+    }
+
+    .box3-1{
+        position:absolute; top:200px; left:500px;
+    }
+    .box3-2{
+        position:absolute; top:500px; left:100px;
+    }
+    .box3-3{
+        position:absolute; top:700px; left:1200px;
+    }
+    
+</style>
+<script>
+    $(document).ready(function(){
+        var scence01Num = 1;
+        var scence02Num = 1;
+        var scence03Num = 1;
+
+        $(window).scroll(function(){
+            var sct = $(document).scrollTop();
+    
+            if(sct >= 200){
+                $('.box1-1').delay(100).stop().animate({opacity: 1, top: "800px"})
+                $('.box1-2').delay(300).stop().animate({opacity: 1, top: "800px"})
+                $('.box1-3').delay(500).stop().animate({opacity: 1, top: "800px"})
+            } else if(sct < 150){
+                $
+            }
+        })
+    })
+</script>
+<body>
+    <div id="wrap">
+        <div id="con1">
+            <div class="box1-1 box">box1-1</div>
+            <div class="box1-2 box">box1-2</div>
+            <div class="box1-3 box">box1-3</div>
+        </div>
+
+        <div id="con2">
+            <div class="box2-1 box">box1-1</div>
+            <div class="box2-2 box">box1-2</div>
+            <div class="box2-3 box">box1-3</div>
+        </div>
+
+        <div id="con3">
+            <div class="box3-1 box">box1-1</div>
+            <div class="box3-2 box">box1-2</div>
+            <div class="box3-3 box">box1-3</div>
+        </div>
+    </div>
+</body>
+</html>

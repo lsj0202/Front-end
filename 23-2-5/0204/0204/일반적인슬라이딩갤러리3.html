@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+
+        #slide{
+               margin: 100px 0px 20px 100px;
+               width: 500px; height: 280px;
+               border:2px solid #000;
+               position: relative;
+               /*overflow: hidden;*/}
+        #viewer{ 
+               opacity: 0.7;
+               width:500px; height: 280px;
+               position: relative;}      
+        #viewer img{float: left;
+               position: absolute;
+               top:0; left: 0;        
+        }  
+        #viewer img:nth-child(1){z-index: 400;}
+        #viewer img:nth-child(2){z-index: 300;}
+        #viewer img:nth-child(3){z-index: 200;}
+        #viewer img:nth-child(4){z-index: 100;}
+
+        .btn{ position:absolute; 
+              right: 10px; bottom: 10px;
+              z-index: 100;}     
+        .btn li{ float: left;
+                 width: 15px; height: 15px;                
+                 margin-right: 10px;
+                 } 
+        .btn li a{
+                display: block;
+                width: 15px; height: 15px;
+                background-color: azure;
+                font-size: 12px;
+                text-align: center; 
+                line-height: 15px;
+        }   
+        .btn li a.on{
+            background-color:rgb(17, 18, 18);
+            color: #fff;
+        } 
+
+        .btn li:last-chil{margin-right:0px;} 
+        
+        #prev{margin-left: 100px;}
+        button{
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #fff;
+            font-size: 12px;
+            padding: 5px 12px;
+            color: #555;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #555;
+            color:#fff;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            var current = 0;
+            var $current = $('.btn li').eq(current).find('a');
+            //첫번째 버튼에 초기값으로 설정
+            $current.addClass('on');           
+            //$('.btn li').eq(0).addClass('on');
+
+            //애니메이션 키값을 추출 함수
+             $('.btn li').click(function(e){
+                e.preventDefault(); // A태그의 href 기능 상실
+                //index() 형제요소와 비교를 일련번호
+                //eq() 형제요소와 비교해서 몇번째 
+                var i = $(this).index();
+                console.log(i);
+                slide(i);
+                $('.btn li a').removeClass('on');
+                $(this).find('a').addClass('on');
+             });
+
+              $('#prev').click(function(e){
+                e.preventDefault();
+                if(current > 0){
+                    current--; //current = current - 1
+                    slide(current);
+
+                    $('.btn li a').removeClass('on');
+                    $('.btn li').eq(current).find('a').addClass('on');   
+                }  
+              });
+
+              $('#next').click(function(e){
+                e.preventDefault(); 
+                if(current < 3){
+                    current++; //current = current + 1
+                    slide(current);
+
+                    $('.btn li a').removeClass('on');
+                    $('.btn li').eq(current).find('a').addClass('on');
+                }    
+              })
+
+
+
+             //viewer를 움직임을 주는 함수
+             function slide(n){
+                  console.log('n:' + n);
+                  //var pos = (-500) * n + 'px';
+                  current = n;
+                  //current 현재 화면에 보이는 이미지를 값을 공통으로 사용하기 위한 저장공간
+                 $('#viewer img').css({opacity:1}).animate({opacity:0})
+                 $('#viewer img').eq(n).css({opacity:0}).animate({opacity:1})
+             }
+
+
+        })
+    </script>
+</head>
+<body>
+    <div id="slide">
+        <div id ='viewer'>
+            <img src="./images/pic1.jpg" alt="이미지1">
+            <img src="./images/pic2.jpg" alt="이미지2">
+            <img src="./images/pic3.jpg" alt="이미지3">
+            <img src="./images/pic4.jpg" alt="이미지4">
+        </div>
+        <ul class="btn">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+    </div>
+    <button id="prev">previous</button>
+    <button id="next">next</button>
+</body>
+</html>

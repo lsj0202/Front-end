@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul,li{list-style: none;}
+        a{text-decoration: none;}
+
+        #mainSlide{
+             width: 100%;
+             height: 400px; 
+             position: relative;
+        }
+        #visual{
+            width: 100%;
+            height: 400px; 
+            position: relative;
+            
+        }
+        #visual ul li{
+            width: 100%;
+            height: 400px;
+            position: absolute;
+            top:0;
+            opacity: 0;
+        }
+        #visual ul li:nth-child(1){ left: 0%; opacity: 1; z-index: 400; background-color:yellowgreen;}
+        #visual ul li:nth-child(2){ left: 0%; z-index: 300;  background-color:rgb(22, 226, 162);}
+        #visual ul li:nth-child(3){ left: 0%; z-index: 200;  background-color:rgb(146, 50, 205);}
+        #visual ul li:nth-child(4){ left: 0%; z-index: 100;  background-color:rgb(205, 151, 50);}
+
+        #btns{position: absolute;
+              bottom: 50px; left: 50%; margin-left: -56px;
+              z-index: 9999;}
+        #btns li {float: left;
+                  margin-right: 16px;
+                  width:16px;
+                  height: 16px;
+                  background-color: white;
+                  border-radius: 50%;
+                  text-indent: -9999px;
+                  overflow: hidden;
+                  } 
+        #btns li a{
+            display: block;
+            width:16px;
+            height: 16px;
+        }
+        #btns li a.on{
+            background-color: violet;
+        }
+
+        .btn{
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            background-color: aliceblue;
+         }
+         #prev{
+            position: absolute;
+            top:185px;
+            left: 100px;
+            z-index: 9999;
+         }
+         #next{
+            position: absolute;
+            top:185px;
+            right: 100px;
+            z-index: 9999;
+         }
+    </style>
+    <script>
+      $(document).ready(function(){
+        var visual = $('#visual > ul > li');
+        var button = $('#btns li');
+        var current = 0;//현재 화면에 보이는 이미지의 인덱스 값
+        var setIntervalId;
+        button.eq(current).find('a').addClass('on');
+
+        /*
+        button.click(function(){
+            var i = $(this).index();
+            console.log(i);
+            movie(i);
+            button.find('a').removeClass('on');
+            $(this).find('a').addClass('on');
+        });
+        */
+        button.on({
+            click:function(){
+                var i = $(this).index();
+                console.log(i);
+                if(i==4){
+
+                }
+                movie(i);
+                button.find('a').removeClass('on');
+                $(this).find('a').addClass('on');  
+            },
+            mouseover:function(){
+
+            },
+            mouseout:function(){
+                
+            }
+        })
+        
+        $('#mainSlide').on({
+            mouseover:function(){
+            clearInterval(setIntervalId);
+            },
+            mouseout:function(){
+                timer();
+            }
+        })
+
+        timer();
+        function timer(){
+            //setIntervalId = setInterval(function(){},시간); //시간간격으로 함수 반복실행
+            //clearInterval(setIntervalId); //setIntervalId안에 있는 자동실행문 setInterval() 중지
+            //setTimeoutId = setTimeout(function(){}, 시간); 시간이 지나면 한번 실행
+            //clearTimeout(setTimeoutId); setTimeout() 실행중지
+
+            setIntervalId = setInterval(function(){
+                var n = current + 1;//0 1 2 3
+                if(n == 4){
+                    n=0;
+                }
+                movie(n);
+                button.find('a').removeClass('on');
+                button.eq(n).find('a').addClass('on');  
+            },3000);
+
+        }
+
+        $('#prev').click(function(e){
+            e.preventDefault();
+            var n = current - 1;
+            if(n == -1){
+                n=3;
+            }
+            movie(n);            
+        });
+        $('#next').click(function(e){
+            e.preventDefault();
+            var n = current + 1;
+            if(n == 4){
+                n=0;
+            }
+            movie(n);            
+        });
+
+        function movie(n){//1 2
+           if(current == n) return;
+           //기존에 슬라이드 번호와 버튼의 번호가 같을경우 작동하지 않게 함
+           console.log('n:'+n);  
+            //현재 객체와 다음 객체를 지정하는 변수를 선언
+            var currentEl = visual.eq(current);//0 1
+            var nextEl = visual.eq(n);//1 2
+            //애니메이션 실행
+            currentEl.css({opacity:1}).stop().animate({opacity:0});
+            nextEl.css({opacity:0}).stop().animate({opacity:1});
+            current = n //1
+        }
+        
+      })
+
+    </script>
+</head>
+<body>
+    <div id="mainSlide">
+        <div id="visual">
+           <ul>
+              <li><h3>1번메인이미지</h3></li>
+              <li><h3>2번메인이미지</h3></li>
+              <li><h3>3번메인이미지</h3></li>
+              <li><h3>4번메인이미지</h3></li>
+           </ul>
+        </div>
+        <ul id="btns">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+        </ul>
+        <a href="#" id="prev" class="btn">prev</a>
+        <a href="#" id="next" class="btn">next</a>
+    </div>
+</body>
+</html>

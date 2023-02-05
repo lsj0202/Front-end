@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+               $('.menu a').click(function(e){
+                  e.preventDefault();//a태그의 이벤트 상실\
+                   //$(대상).Attr(); 대상의 속성을 관한 메소드
+                  var path = $(this).attr('href');//속성 추출
+                  console.log(path);
+
+                  $('.largeimg img').attr({src:path});//속성 적용
+                  $(".largeimg img").css({opacity:0})
+                  .stop()
+                  .animate({opacity:1}, 1000);
+		
+               })
+        })
+    </script>
+</head>
+<body>
+    <div class="menu">
+        <a href="images/pic1.jpg"><img src="images/th_pic1.jpg" alt="" ></a>
+        <a href="images/pic2.jpg"><img src="images/th_pic2.jpg" alt=""  ></a>
+        <a href="images/pic3.jpg"><img src="images/th_pic3.jpg" alt=""  ></a>
+    </div>
+    <div class="largeimg"><img src="images/pic1.jpg" alt="image1" ></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.js"></script>
+    <style>
+         .caption{position:relative; 
+                  border: 1px solid #555; 
+                  padding: 10px;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('em').hide();
+
+               $('.menu a').click(function(e){
+                  e.preventDefault();//a태그의 이벤트 상실\
+                   //$(대상).Attr(); 대상의 속성을 관한 메소드
+                  var path = $(this).attr('href');//속성 추출
+                  console.log(path);                
+
+                  if($(".caption")){
+                        $(".caption").remove(); // append()와 반대되는 명령어입니다.
+                  }
+
+                  if(path != $(".largeimg img").attr("src")){
+                    //현재 path안에 이미지경로와 $(".largeimg img")의 src가 같지않을때 실행
+                        $('.largeimg img').attr({src:path});//속성 적용
+                        $(".largeimg img").css({opacity:0})
+                        .stop()
+                        .animate({opacity:1}, 1000);
+                  }
+                  var msg = $(this).next('em').text();//요소 글자만 추출
+                  //text(): 특정요소안에 있는 글자만 추출
+                  //html(): 특정요소에 글자뿐만아니라 태그까지 다 추출
+                  console.log(msg);
+
+                  //태그추가
+                  $('.largeimg').append('<div class="caption"></div>')
+                  $(".largeimg .caption").text(msg);
+
+                  //추가된 설명글에 애니메이션 설정
+                  //num = 0
+                  //num = num - num
+                  //mum -= num 또는 -= num
+                  var posy = $(".largeimg .caption").height() + 27;
+                  $(".largeimg .caption").animate({top:'-=' + posy + 'px'})
+               })
+        })
+    </script>
+</head>
+<body>
+    <div class="menu">
+        <a href="images/pic1.jpg"><img src="images/th_pic1.jpg" alt="" ></a>
+        <em>이미지1번입니다</em>
+        <a href="images/pic2.jpg"><img src="images/th_pic2.jpg" alt=""  ></a>
+        <em>이미지2번입니다</em>
+        <a href="images/pic3.jpg"><img src="images/th_pic3.jpg" alt=""  ></a>
+        <em>이미지3번입니다</em>
+    </div>
+    <div class="largeimg"><img src="images/pic1.jpg" alt="image1" >
+    <!-- <div class='caption'>이미지 설명글 입력</div> --></div>
+    
+</body>
+</html>
