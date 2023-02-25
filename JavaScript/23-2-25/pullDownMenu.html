@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀다운 매뉴</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            border:0px;
+            text-decoration: none;
+        }
+        body{padding: 50px;}
+
+        .container {
+            margin-top: 35px;
+            width: 440px;
+        }
+        .picture{
+            margin-top: 30px;
+            width: 1220px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .picture ul{
+            float: left;
+            margin-left: -1200px;
+            width:1200px;
+            transition: margin-left 0.8s;
+        }
+        .picture ul.on{
+            margin-left: 0;
+        }
+        .picture li{
+            float:left;
+            width:200px;
+            height:200px;
+        }
+        .picture img{
+            max-width: 100%;
+            height: auto;
+            opacity: 0.7;
+            transition: all 0.5s;
+        }
+        .handle{
+            float: left;
+            display:block;
+            width:20px;
+            height: 200px;
+            background-color: #333;
+            border-radius: 0 10px 10px 0;
+            text-indent: -9999px;
+        }
+        .picture li.over img{
+            opacity:1;
+        }
+    </style>
+    <script>
+        window.addEventListener('load',function(){
+            const picture = document.querySelector('.picture');
+            let pictureUl;
+            let handle;
+
+            for(var i=0; i<picture.children.length; i++){
+                if(picture.children[i].tagName == 'UL'){
+                    pictureUl = picture.children[i];
+                } else if(picture.children[i].tagName == 'A'){
+                    handle= picture.children[i];
+                }
+            }
+            handle.addEventListener('click', (e) => {
+                e.preventDefault();
+                pictureUl.classList.toggle('on');
+            })
+       });
+    </script>
+</head>
+<body>
+    <div class='container'>
+        <div class="picture">
+            <ul>
+                <li><img src="images/work1.jpg"></li>
+                <li><img src="images/work2.jpg"></li>
+                <li><img src="images/work3.jpg"></li>
+                <li><img src="images/work4.jpg"></li>
+                <li><img src="images/work5.jpg"></li>
+                <li><img src="images/work6.jpg"></li>
+            </ul>
+            <a href='' class='handle'>click</a>
+        </div>
+    </div>
+</body>
+</html>
