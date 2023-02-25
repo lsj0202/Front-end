@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        body{
+            background-color: gray;
+            padding: 50px;
+        }
+        .container{
+            margin-top: 40px;
+            max-width: 440px;
+        }
+        .controller{
+            padding-top: 20px;
+        }
+        .controller li {
+            float:left;
+        }
+        .controller li:first-child{
+            margin-left:0;
+        }
+        .controller li a{
+            display:block;
+            width:20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 10px;
+            transition: all 0.5s;
+            margin-left:8px;
+        }
+        .controller li.on a{
+            width:50px;
+            background-color: yellowgreen;
+        }
+
+        .picture{
+            margin-top:30px;
+            width: 400px;
+            height: 400px;
+            position:relative;
+            overflow: hidden;
+        }
+        .picture ul{
+            position: absolute;
+            left:0;
+            top:0;
+            margin: 0;
+            padding: 0;
+            width:2400px;
+            transition: left 0.4s;
+        }
+        .picture ul li{
+            float: left;
+            width: 400px;
+            height:400px;
+        }
+        .picture ul li img{
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        window.addEventListener("load", () => {
+            const container = document.getElementsByClassName("container")[0];
+            const controller = container.children[0];
+            const pictureLi = controller.children;
+
+            const picture = document.getElementsByClassName("picture")[0];
+            const pictureUl = picture.children[0];
+
+            console.log(pictureUl);
+            console.log(pictureLi);
+            let n = 0;
+            let targetx = 0;
+
+            for(let i = 0; i < pictureLi.length; i++){
+                pictureLi[i].index = i;//인덱스 값을 반복문에 i값을 li의 인덱스 값으로 적용
+                pictureLi[i].addEventListener("click",(e) => {
+                    e.preventDefault();
+                    n = e.currentTarget.index;
+                    //currentTarget : 이벤트리스너를 가진 요소
+                    //target : 이벤트가 발생한 바로 그 요소를 의미
+                    targetx = n*400*(-1);
+                    pictureUl.style.left = targetx + 'px';
+
+                    for(let j = 0; j < pictureLi.length; j++){
+                        if(j == n){
+                            pictureLi[j].classList.add('on');
+                        }else{
+                            pictureLi[j].classList.remove('on');
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <ul class="controller">
+            <li class="on"><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </div>
+    <div class="picture">
+        <ul class="controller">
+            <li><img src="images/work1.jpg"></li>
+            <li><img src="images/work2.jpg"></li>
+            <li><img src="images/work3.jpg"></li>
+            <li><img src="images/work4.jpg"></li>
+            <li><img src="images/work5.jpg"></li>
+            <li><img src="images/work6.jpg"></li>
+        </ul>
+    </div>
+</body>
+</html>

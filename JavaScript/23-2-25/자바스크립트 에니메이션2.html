@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            margin: 50px 0 0 50px;
+            padding: 5px 15px;
+            background-color: #666;
+            color:#000;
+            border: 0px;
+            cursor:pointer;
+        }
+        button:hover{
+            background-color: #888;
+        }
+
+        .ball{
+            width: 30px;
+            height: 30px;
+            background-color: tomato;
+            border-radius: 50%;
+            position: absolute;
+            left:100px;
+            top: 100px;
+        }
+
+        .ball.ani{
+            animation-name: moving;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes moving{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(1000px);
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            const addbtn = document.querySelector('#add'); 
+            const removebtn = document.querySelector('#remove'); 
+            const container = document.getElementsByClassName('container')[0];
+            let ball;
+
+            for(let i=0; i<container.childNodes.length; i++) {
+                if(container.childNodes[i].className == 'ball'){
+                    ball = container.childNodes[i];
+                }
+            }
+
+            addbtn.addEventListener('click',() => {
+                ball.classList.add('ani');
+            });
+            removebtn.addEventListener('click',() => {
+                ball.classList.remove('ani');
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button id="add">add</button>
+        <button id="remove">remove</button>
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
