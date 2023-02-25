@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            padding: 5px 15px;
+            background-color: #666;
+            color:#000;
+            border: 0px;
+            cursor:pointer;
+        }
+        button:hover{
+            background-color: #888;
+        }
+
+        .ball{
+            width: 30px;
+            height: 30px;
+            background-color: tomato;
+            border-radius: 50%;
+            position: absolute;
+            left:100px;
+            top: 100px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            const $queue = document.querySelector('#queue');
+            const $ball = document.querySelector('.ball');
+            const x = $ball.offsetLeft;
+            const targetx = 400
+
+            //이벤트를 발생하는 함수
+            queue.addEventListener('click', () => {
+                animate1($ball, x, targetx);
+            });
+
+            //애니메이션 함수
+            const animate1 = (target, startx, targetx) => {
+                //타겟 지정, 시작위치, 끝위치
+                const timer = setInterval(() => {
+                    if(startx < targetx) {
+                        startx += 10
+                    }else{
+                        startx = targetx; // 마지막 위치값 400을 대입
+                        clearInterval(timer);
+                    }
+                    target.style.left = startx + 'px';
+                }, 10);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <button id="queue">animate queue</button>
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
