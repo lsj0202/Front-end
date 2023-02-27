@@ -153,10 +153,11 @@
             let n = 0;
 
             //wrapper.children의 top값을 순서대로 배열 offsety에 저장
-            for(var i=0; i<contents.length; i++) {
+            for(var i=0; i<contents.length; i++) {  
                 offsety.push(contents[i].offsetTop);
                 console.log(offsety);
             }
+
 
             const scrollHandler = () => {
                 setTimeout(() => {
